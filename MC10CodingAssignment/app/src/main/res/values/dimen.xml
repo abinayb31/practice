@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="login_text_size">20dp</dimen>
+    <dimen name="splash_spinner">100dp</dimen>
+    <dimen name="study_Item_height">130dp</dimen>
+    <dimen name="study_item_name_font">15dp</dimen>
+    <dimen name="study_item_date_font">15dp</dimen>
+    <dimen name="study_item_title_font">15dp</dimen>
+    <dimen name="title_margin">10dp</dimen>
+    <dimen name="login_margin">10dp</dimen>
+</resources>

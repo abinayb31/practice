@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "394576523522",
+    "firebase_url": "https://notificationtest-99b9a.firebaseio.com",
+    "project_id": "notificationtest-99b9a",
+    "storage_bucket": "notificationtest-99b9a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:394576523522:android:4e55a75cb842b50a",
+        "android_client_info": {
+          "package_name": "com.mc10.bandaab.notificationtest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "394576523522-f56epimab0amtk26e9jueqib7a1lhk01.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA86zdiEI-ki9ZqNY6kikTnZqaLNktMflE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

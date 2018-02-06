@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/large_margin">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/large_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/large_margin"
+            android:text="@string/lyrics"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="@dimen/header_text" />
+
+        <TextView
+            android:id="@+id/error_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/error"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/lyrics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_margin"
+            android:textSize="@dimen/description_text" />
+
+        <TextView
+            android:id="@+id/click_here"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/description_text"
+            android:text="@string/click_here"
+            android:textColor="@color/link"/>
+
+        <ImageButton
+            android:id="@+id/play_video"
+            android:layout_width="@dimen/play_icon_width"
+            android:layout_height="@dimen/play_icon_width"
+            android:background="@drawable/ic_play_circle_filled_black_24dp"
+            android:layout_marginTop="@dimen/play_icon_top_padding"/>
+
+        <ImageButton
+            android:id="@+id/home_screen"
+            android:layout_width="@dimen/play_icon_width"
+            android:layout_height="@dimen/play_icon_width"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/ic_home_black_24dp"
+            android:layout_marginTop="@dimen/large_margin" />
+
+        <com.google.android.youtube.player.YouTubePlayerView
+            android:id="@+id/player_view"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</ScrollView>

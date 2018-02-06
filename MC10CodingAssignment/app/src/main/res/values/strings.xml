@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MC10 Coding Assignment</string>
+    <string name="email">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="studies">Studies</string>
+</resources>

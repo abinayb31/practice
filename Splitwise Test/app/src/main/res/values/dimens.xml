@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="search_margin">20dp</dimen>
+    <dimen name="search_result_margin">5dp</dimen>
+    <dimen name="search_margin_top">120dp</dimen>
+    <dimen name="search_result_text">30dp</dimen>
+    <dimen name="search_result_item_height">174dp</dimen>
+    <dimen name="search_result_item_marginTop">4dp</dimen>
+    <dimen name="search_result_tile_margin_left">4dp</dimen>
+    <dimen name="search_result_tile_margin_bottom">4dp</dimen>
+    <dimen name="search_result_tile_type_text">15sp</dimen>
+    <dimen name="search_result_tile_title_text">20sp</dimen>
+</resources>

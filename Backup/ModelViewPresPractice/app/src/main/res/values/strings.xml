@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ModelViewPresPractice</string>
+    <string name="search_hint_text">Enter Song/Artist name</string>
+    <string name="search_text">Search</string>
+</resources>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Splitwise Test</string>
+    <string name="search_hint_text">Enter Song/Artist name</string>
+    <string name="search_text">Search</string>
+    <string name="search_result_text">Search Result</string>
+    <string name="search_result_tile_title">See What\'s Trending See What\'s Trending</string>
+    <string name="search_result_tile_type">Featured</string>
+</resources>

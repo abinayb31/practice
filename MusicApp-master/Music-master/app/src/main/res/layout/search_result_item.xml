@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/one_tile_capsule">
+
+    <ImageView
+        android:id="@+id/tile_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tile_height"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/black"
+        android:scaleType="centerCrop" />
+
+    <!-- 63.68% (wrt ht of image) gradation opacity 5%-->
+    <View
+        android:id="@+id/gradation_top1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/opacity_5" />
+
+    <!--36.32% (wrt ht of image) gradation opacity from 50% to 60%-->
+    <View
+        android:id="@+id/gradation_top2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/gradation_top1"
+        android:background="@drawable/opacity_5_50_60" />
+
+    <TextView
+        android:id="@+id/tile_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tile_title"
+        android:layout_marginLeft="4dp"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:textSize="15sp"
+        android:textColor="@android:color/white"
+        android:text="Featured" />
+
+    <TextView
+        android:id="@+id/tile_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tile_image"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="4dp"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:text="See What's Trending See What's Trending" />
+
+
+
+</RelativeLayout>
