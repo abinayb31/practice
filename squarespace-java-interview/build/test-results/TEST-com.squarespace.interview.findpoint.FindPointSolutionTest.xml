@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.squarespace.interview.findpoint.FindPointSolutionTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2018-02-10T16:33:04" hostname="TMA0004ALKVTBIJ" time="0.116">
+  <properties/>
+  <testcase name="testRun000" classname="com.squarespace.interview.findpoint.FindPointSolutionTest" time="0.033"/>
+  <testcase name="testRun001" classname="com.squarespace.interview.findpoint.FindPointSolutionTest" time="0.004"/>
+  <testcase name="testRun002" classname="com.squarespace.interview.findpoint.FindPointSolutionTest" time="0.053"/>
+  <testcase name="testRun003" classname="com.squarespace.interview.findpoint.FindPointSolutionTest" time="0.025"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

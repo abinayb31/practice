@@ -104,7 +104,7 @@ public class SearchResultAdapter extends RecyclerView.Adapter implements ISearch
 
     protected void setTrackImage(ImageView imageView, String url) {
         // Download Image in background
-        mSearchResultPresenter.onImageDownload(imageView,url);
+        mSearchResultPresenter.onImageDownload(imageView,url,context);
     }
 
     public void openDetail(int position) {

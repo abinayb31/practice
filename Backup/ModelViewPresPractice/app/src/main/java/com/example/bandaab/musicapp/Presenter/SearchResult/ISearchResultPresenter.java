@@ -1,5 +1,6 @@
 package com.example.bandaab.musicapp.Presenter.SearchResult;
 
+import android.content.Context;
 import android.widget.ImageView;
 
 /**
@@ -7,5 +8,5 @@ import android.widget.ImageView;
  */
 
 public interface ISearchResultPresenter {
-    void onImageDownload(ImageView imageView, String url);
+    void onImageDownload(ImageView imageView, String url, Context context);
 }

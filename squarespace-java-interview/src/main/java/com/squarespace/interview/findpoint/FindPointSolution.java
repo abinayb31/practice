@@ -21,8 +21,6 @@ public class FindPointSolution {
   static List<String> nodesList;
   static int parentX1,parentY1;
   public static List<String> findPathToNode(Node rootNode, Point toFind) {
-    // @ToDo Implement this routine
-//    rootNode.getChildren()
     nodesList = new ArrayList<>();
     parentX1 = 0;
     parentY1 = 0;

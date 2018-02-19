@@ -1,11 +1,14 @@
 package com.example.bandaab.musicapp.Presenter.SearchResult;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.widget.ImageView;
 
+import com.example.bandaab.musicapp.R;
 import com.example.bandaab.musicapp.UI.fragments.searchResult.ISearchResultView;
+import com.squareup.picasso.Picasso;
 
 import java.io.InputStream;
 
@@ -22,35 +25,7 @@ public class SearchResultPresenter implements ISearchResultPresenter{
     }
 
     @Override
-    public void onImageDownload(ImageView imageView, String url) {
-        new DownloadImageTask(imageView).execute(url);
-    }
-
-    private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
-        ImageView trackImage;
-
-        public DownloadImageTask(ImageView image) {
-            this.trackImage = image;
-        }
-
-        protected Bitmap doInBackground(String... urls) {
-            String urldisplay = urls[0];
-            Bitmap icon = null;
-            try {
-                InputStream in = new java.net.URL(urldisplay).openStream();
-                icon = BitmapFactory.decodeStream(in);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            return icon;
-        }
-
-        protected void onPostExecute(Bitmap result) {
-            if(result != null){
-                mSearchResultView.OnImageDownloadedSucess(trackImage, result);
-            } else{
-                mSearchResultView.OnImageDownloadedFail();
-            }
-        }
+    public void onImageDownload(ImageView imageView, String url, Context context) {
+        Picasso.with(context).load(url).placeholder(R.mipmap.ic_launcher).into(imageView);
     }
 }
