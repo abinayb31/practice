@@ -18,7 +18,16 @@ import java.io.InputStreamReader;
 import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
+import io.reactivex.Observable;
+import io.reactivex.Observer;
+import io.reactivex.Scheduler;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
+import io.reactivex.schedulers.Schedulers;
 import retrofit2.Call;
 import retrofit2.Callback;
 
@@ -53,17 +62,47 @@ public class SearchPresenter implements ISearchPresenter, OnSearchFinishedListen
     public void onSuccess() {
         String searchKeyword = mSearchText.replaceAll("\\s", "");
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
-        Call<Response> call = apiService.getAlbums(searchKeyword);
-        call.enqueue(new Callback<Response>() {
-            @Override
-            public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
-                    mSearchView.OnSearchSuccess(response.body());
-            }
 
-            @Override
-            public void onFailure(Call<Response> call, Throwable t) {
-                mSearchView.OnSearchFail("Search failed please try again");
-            }
-        });
+        //With out RXjava
+//        Call<Response> call = apiService.getAlbums(searchKeyword);
+//        call.enqueue(new Callback<Response>() {
+//            @Override
+//            public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
+//                    mSearchView.OnSearchSuccess(response.body());
+//            }
+//
+//            @Override
+//            public void onFailure(Call<Response> call, Throwable t) {
+//                mSearchView.OnSearchFail("Search failed please try again");
+//            }
+//        });
+
+
+        //With
+        Observable<Response> observable = apiService.getAlbums(searchKeyword);
+        observable.subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<Response>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(Response value) {
+                        mSearchView.OnSearchSuccess(value);
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        mSearchView.OnSearchFail("Search failed please try again");
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+
+                });
     }
 }

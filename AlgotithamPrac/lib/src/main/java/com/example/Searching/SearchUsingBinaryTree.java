@@ -43,7 +43,7 @@ public class SearchUsingBinaryTree {
 //        System.out.println("\nNode with the key 75");
 //
 //        System.out.println(theTree.findNode(75));
-        System.out.println("Depth ==>"+theTree.maxDepth(theTree.root));
+//        System.out.println("Depth ==>"+theTree.maxDepth(theTree.root));
 
     }
 }

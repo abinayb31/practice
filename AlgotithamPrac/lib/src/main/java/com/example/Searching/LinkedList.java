@@ -17,6 +17,7 @@ public class LinkedList {
     }
 
     private Node head;
+
     private int size = 0;
 
     public boolean isEmpty(){

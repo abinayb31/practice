@@ -1,18 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--<data>-->
+        <!--<variable-->
+            <!--name="user"-->
+            <!--type="com.example.bandaab.mvvmprac.viewmodel.UserModel"/>-->
+
+        <!--<variable-->
+            <!--name="userLoginEvent"-->
+            <!--type="com.example.bandaab.mvvmprac.commands.userLogin"/>-->
+    <!--</data>-->
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.bandaab.mvvmprac.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!--<EditText-->
+        <!--android:id="@+id/email"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="@{user.emailHint}"-->
+        <!--android:text="@={user.email}"-->
+        <!--android:layout_gravity="center"/>-->
 
-</android.support.constraint.ConstraintLayout>
+    <!--<EditText-->
+        <!--android:id="@+id/password"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="@{user.passwordHint}"-->
+        <!--android:text="@={user.password}"-->
+        <!--android:layout_gravity="center" />-->
+
+    <ListView
+        android:id="@+id/newslistView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="10dp"></ListView>
+
+</LinearLayout>
+</layout>
